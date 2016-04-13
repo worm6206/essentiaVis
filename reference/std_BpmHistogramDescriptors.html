@@ -1,0 +1,314 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Algorithm reference: BpmHistogramDescriptors &mdash; Essentia 2.1-dev documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc_mtg.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.1-dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Essentia 2.1-dev documentation" href="../index.html" />
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-18322085-51', 'upf.edu');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+  </head>
+  <body>
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<img src="../_static/essentia_logo.png" alt="Essentia logo" />
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+    <li><a href="http://essentia.upf.edu">HOME</a>&nbsp;|&nbsp;</li>
+    <li><a href="../index.html">DOCUMENTATION</a>&nbsp;|&nbsp;</li>
+    <li><a href="http://essentia.upf.edu/download">DOWNLOAD</a>&nbsp;|&nbsp;</li>
+    <li><a href="http://essentia.upf.edu/applications">APPLICATIONS</a>&nbsp;|&nbsp;</li>
+    <li><a href="http://essentia.upf.edu/news">NEWS</a>&nbsp;|&nbsp;</li>
+    <li><a href="http://essentia.upf.edu/contact">ABOUT</a>&nbsp;|&nbsp;</li>
+    <!-- <li><a href="../contents.html">Documentation contents</a>&raquo;</li> -->
+ 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body">
+            
+
+<div class="sphinxsidebar">
+  <div class="sphinxsidebarwrapper">
+
+    <p><strong>Standard algorithms</strong></p>
+
+<div><a href="std_AfterMaxToBeforeMaxEnergyRatio.html">AfterMaxToBeforeMaxEnergyRatio</a></div>
+<div><a href="std_AllPass.html">AllPass</a></div>
+<div><a href="std_AudioLoader.html">AudioLoader</a></div>
+<div><a href="std_AudioOnsetsMarker.html">AudioOnsetsMarker</a></div>
+<div><a href="std_AudioWriter.html">AudioWriter</a></div>
+<div><a href="std_AutoCorrelation.html">AutoCorrelation</a></div>
+<div><a href="std_BPF.html">BPF</a></div>
+<div><a href="std_BandPass.html">BandPass</a></div>
+<div><a href="std_BandReject.html">BandReject</a></div>
+<div><a href="std_BarkBands.html">BarkBands</a></div>
+<div><a href="std_BeatTrackerDegara.html">BeatTrackerDegara</a></div>
+<div><a href="std_BeatTrackerMultiFeature.html">BeatTrackerMultiFeature</a></div>
+<div><a href="std_Beatogram.html">Beatogram</a></div>
+<div><a href="std_BeatsLoudness.html">BeatsLoudness</a></div>
+<div><a href="std_BinaryOperator.html">BinaryOperator</a></div>
+<div><a href="std_BinaryOperatorStream.html">BinaryOperatorStream</a></div>
+<div><a href="std_BpmHistogramDescriptors.html">BpmHistogramDescriptors</a></div>
+<div><a href="std_BpmRubato.html">BpmRubato</a></div>
+<div><a href="std_CartesianToPolar.html">CartesianToPolar</a></div>
+<div><a href="std_CentralMoments.html">CentralMoments</a></div>
+<div><a href="std_Centroid.html">Centroid</a></div>
+<div><a href="std_ChordsDescriptors.html">ChordsDescriptors</a></div>
+<div><a href="std_ChordsDetection.html">ChordsDetection</a></div>
+<div><a href="std_ChordsDetectionBeats.html">ChordsDetectionBeats</a></div>
+<div><a href="std_Clipper.html">Clipper</a></div>
+<div><a href="std_Crest.html">Crest</a></div>
+<div><a href="std_CrossCorrelation.html">CrossCorrelation</a></div>
+<div><a href="std_CubicSpline.html">CubicSpline</a></div>
+<div><a href="std_DCRemoval.html">DCRemoval</a></div>
+<div><a href="std_DCT.html">DCT</a></div>
+<div><a href="std_Danceability.html">Danceability</a></div>
+<div><a href="std_Decrease.html">Decrease</a></div>
+<div><a href="std_Derivative.html">Derivative</a></div>
+<div><a href="std_DerivativeSFX.html">DerivativeSFX</a></div>
+<div><a href="std_Dissonance.html">Dissonance</a></div>
+<div><a href="std_DistributionShape.html">DistributionShape</a></div>
+<div><a href="std_Duration.html">Duration</a></div>
+<div><a href="std_DynamicComplexity.html">DynamicComplexity</a></div>
+<div><a href="std_ERBBands.html">ERBBands</a></div>
+<div><a href="std_EasyLoader.html">EasyLoader</a></div>
+<div><a href="std_EffectiveDuration.html">EffectiveDuration</a></div>
+<div><a href="std_Energy.html">Energy</a></div>
+<div><a href="std_EnergyBand.html">EnergyBand</a></div>
+<div><a href="std_EnergyBandRatio.html">EnergyBandRatio</a></div>
+<div><a href="std_Entropy.html">Entropy</a></div>
+<div><a href="std_Envelope.html">Envelope</a></div>
+<div><a href="std_EqloudLoader.html">EqloudLoader</a></div>
+<div><a href="std_EqualLoudness.html">EqualLoudness</a></div>
+<div><a href="std_Extractor.html">Extractor</a></div>
+<div><a href="std_FFT.html">FFT</a></div>
+<div><a href="std_FadeDetection.html">FadeDetection</a></div>
+<div><a href="std_Flatness.html">Flatness</a></div>
+<div><a href="std_FlatnessDB.html">FlatnessDB</a></div>
+<div><a href="std_FlatnessSFX.html">FlatnessSFX</a></div>
+<div><a href="std_Flux.html">Flux</a></div>
+<div><a href="std_FrameCutter.html">FrameCutter</a></div>
+<div><a href="std_FrameGenerator.html">FrameGenerator</a></div>
+<div><a href="std_FrameToReal.html">FrameToReal</a></div>
+<div><a href="std_FrequencyBands.html">FrequencyBands</a></div>
+<div><a href="std_GFCC.html">GFCC</a></div>
+<div><a href="std_GeometricMean.html">GeometricMean</a></div>
+<div><a href="std_HFC.html">HFC</a></div>
+<div><a href="std_HPCP.html">HPCP</a></div>
+<div><a href="std_HarmonicBpm.html">HarmonicBpm</a></div>
+<div><a href="std_HarmonicMask.html">HarmonicMask</a></div>
+<div><a href="std_HarmonicPeaks.html">HarmonicPeaks</a></div>
+<div><a href="std_HighPass.html">HighPass</a></div>
+<div><a href="std_HighResolutionFeatures.html">HighResolutionFeatures</a></div>
+<div><a href="std_IFFT.html">IFFT</a></div>
+<div><a href="std_IIR.html">IIR</a></div>
+<div><a href="std_Inharmonicity.html">Inharmonicity</a></div>
+<div><a href="std_InstantPower.html">InstantPower</a></div>
+<div><a href="std_Intensity.html">Intensity</a></div>
+<div><a href="std_Key.html">Key</a></div>
+<div><a href="std_KeyExtractor.html">KeyExtractor</a></div>
+<div><a href="std_LPC.html">LPC</a></div>
+<div><a href="std_Larm.html">Larm</a></div>
+<div><a href="std_Leq.html">Leq</a></div>
+<div><a href="std_LevelExtractor.html">LevelExtractor</a></div>
+<div><a href="std_LogAttackTime.html">LogAttackTime</a></div>
+<div><a href="std_Loudness.html">Loudness</a></div>
+<div><a href="std_LoudnessEBUR128.html">LoudnessEBUR128</a></div>
+<div><a href="std_LoudnessVickers.html">LoudnessVickers</a></div>
+<div><a href="std_LowLevelSpectralEqloudExtractor.html">LowLevelSpectralEqloudExtractor</a></div>
+<div><a href="std_LowLevelSpectralExtractor.html">LowLevelSpectralExtractor</a></div>
+<div><a href="std_LowPass.html">LowPass</a></div>
+<div><a href="std_MFCC.html">MFCC</a></div>
+<div><a href="std_Magnitude.html">Magnitude</a></div>
+<div><a href="std_MaxFilter.html">MaxFilter</a></div>
+<div><a href="std_MaxMagFreq.html">MaxMagFreq</a></div>
+<div><a href="std_MaxToTotal.html">MaxToTotal</a></div>
+<div><a href="std_Mean.html">Mean</a></div>
+<div><a href="std_Median.html">Median</a></div>
+<div><a href="std_MelBands.html">MelBands</a></div>
+<div><a href="std_MetadataReader.html">MetadataReader</a></div>
+<div><a href="std_Meter.html">Meter</a></div>
+<div><a href="std_MinToTotal.html">MinToTotal</a></div>
+<div><a href="std_MonoLoader.html">MonoLoader</a></div>
+<div><a href="std_MonoMixer.html">MonoMixer</a></div>
+<div><a href="std_MonoWriter.html">MonoWriter</a></div>
+<div><a href="std_MovingAverage.html">MovingAverage</a></div>
+<div><a href="std_MultiPitchKlapuri.html">MultiPitchKlapuri</a></div>
+<div><a href="std_MultiPitchMelodia.html">MultiPitchMelodia</a></div>
+<div><a href="std_Multiplexer.html">Multiplexer</a></div>
+<div><a href="std_NoiseAdder.html">NoiseAdder</a></div>
+<div><a href="std_NoveltyCurve.html">NoveltyCurve</a></div>
+<div><a href="std_NoveltyCurveFixedBpmEstimator.html">NoveltyCurveFixedBpmEstimator</a></div>
+<div><a href="std_OddToEvenHarmonicEnergyRatio.html">OddToEvenHarmonicEnergyRatio</a></div>
+<div><a href="std_OnsetDetection.html">OnsetDetection</a></div>
+<div><a href="std_OnsetDetectionGlobal.html">OnsetDetectionGlobal</a></div>
+<div><a href="std_OnsetRate.html">OnsetRate</a></div>
+<div><a href="std_Onsets.html">Onsets</a></div>
+<div><a href="std_OverlapAdd.html">OverlapAdd</a></div>
+<div><a href="std_PCA.html">PCA</a></div>
+<div><a href="std_Panning.html">Panning</a></div>
+<div><a href="std_PeakDetection.html">PeakDetection</a></div>
+<div><a href="std_PitchContourSegmentation.html">PitchContourSegmentation</a></div>
+<div><a href="std_PitchContours.html">PitchContours</a></div>
+<div><a href="std_PitchContoursMelody.html">PitchContoursMelody</a></div>
+<div><a href="std_PitchContoursMonoMelody.html">PitchContoursMonoMelody</a></div>
+<div><a href="std_PitchContoursMultiMelody.html">PitchContoursMultiMelody</a></div>
+<div><a href="std_PitchFilter.html">PitchFilter</a></div>
+<div><a href="std_PitchMelodia.html">PitchMelodia</a></div>
+<div><a href="std_PitchSalience.html">PitchSalience</a></div>
+<div><a href="std_PitchSalienceFunction.html">PitchSalienceFunction</a></div>
+<div><a href="std_PitchSalienceFunctionPeaks.html">PitchSalienceFunctionPeaks</a></div>
+<div><a href="std_PitchYin.html">PitchYin</a></div>
+<div><a href="std_PitchYinFFT.html">PitchYinFFT</a></div>
+<div><a href="std_PolarToCartesian.html">PolarToCartesian</a></div>
+<div><a href="std_PoolAggregator.html">PoolAggregator</a></div>
+<div><a href="std_PowerMean.html">PowerMean</a></div>
+<div><a href="std_PowerSpectrum.html">PowerSpectrum</a></div>
+<div><a href="std_PredominantPitchMelodia.html">PredominantPitchMelodia</a></div>
+<div><a href="std_RMS.html">RMS</a></div>
+<div><a href="std_RawMoments.html">RawMoments</a></div>
+<div><a href="std_ReplayGain.html">ReplayGain</a></div>
+<div><a href="std_Resample.html">Resample</a></div>
+<div><a href="std_RhythmDescriptors.html">RhythmDescriptors</a></div>
+<div><a href="std_RhythmExtractor.html">RhythmExtractor</a></div>
+<div><a href="std_RhythmExtractor2013.html">RhythmExtractor2013</a></div>
+<div><a href="std_RhythmTransform.html">RhythmTransform</a></div>
+<div><a href="std_RollOff.html">RollOff</a></div>
+<div><a href="std_SBic.html">SBic</a></div>
+<div><a href="std_Scale.html">Scale</a></div>
+<div><a href="std_SilenceRate.html">SilenceRate</a></div>
+<div><a href="std_SineModel.html">SineModel</a></div>
+<div><a href="std_SingleBeatLoudness.html">SingleBeatLoudness</a></div>
+<div><a href="std_SingleGaussian.html">SingleGaussian</a></div>
+<div><a href="std_Slicer.html">Slicer</a></div>
+<div><a href="std_SpectralComplexity.html">SpectralComplexity</a></div>
+<div><a href="std_SpectralContrast.html">SpectralContrast</a></div>
+<div><a href="std_SpectralPeaks.html">SpectralPeaks</a></div>
+<div><a href="std_SpectralWhitening.html">SpectralWhitening</a></div>
+<div><a href="std_Spectrum.html">Spectrum</a></div>
+<div><a href="std_Spline.html">Spline</a></div>
+<div><a href="std_StartStopSilence.html">StartStopSilence</a></div>
+<div><a href="std_StereoDemuxer.html">StereoDemuxer</a></div>
+<div><a href="std_StrongDecay.html">StrongDecay</a></div>
+<div><a href="std_StrongPeak.html">StrongPeak</a></div>
+<div><a href="std_SuperFluxExtractor.html">SuperFluxExtractor</a></div>
+<div><a href="std_SuperFluxNovelty.html">SuperFluxNovelty</a></div>
+<div><a href="std_SuperFluxPeaks.html">SuperFluxPeaks</a></div>
+<div><a href="std_TCToTotal.html">TCToTotal</a></div>
+<div><a href="std_TempoScaleBands.html">TempoScaleBands</a></div>
+<div><a href="std_TempoTap.html">TempoTap</a></div>
+<div><a href="std_TempoTapDegara.html">TempoTapDegara</a></div>
+<div><a href="std_TempoTapMaxAgreement.html">TempoTapMaxAgreement</a></div>
+<div><a href="std_TempoTapTicks.html">TempoTapTicks</a></div>
+<div><a href="std_TonalExtractor.html">TonalExtractor</a></div>
+<div><a href="std_TonicIndianArtMusic.html">TonicIndianArtMusic</a></div>
+<div><a href="std_TriangularBands.html">TriangularBands</a></div>
+<div><a href="std_Trimmer.html">Trimmer</a></div>
+<div><a href="std_Tristimulus.html">Tristimulus</a></div>
+<div><a href="std_TuningFrequency.html">TuningFrequency</a></div>
+<div><a href="std_TuningFrequencyExtractor.html">TuningFrequencyExtractor</a></div>
+<div><a href="std_UnaryOperator.html">UnaryOperator</a></div>
+<div><a href="std_UnaryOperatorStream.html">UnaryOperatorStream</a></div>
+<div><a href="std_Variance.html">Variance</a></div>
+<div><a href="std_Vibrato.html">Vibrato</a></div>
+<div><a href="std_WarpedAutoCorrelation.html">WarpedAutoCorrelation</a></div>
+<div><a href="std_Windowing.html">Windowing</a></div>
+<div><a href="std_YamlInput.html">YamlInput</a></div>
+<div><a href="std_YamlOutput.html">YamlOutput</a></div>
+<div><a href="std_ZeroCrossingRate.html">ZeroCrossingRate</a></div>
+
+  </div>
+</div>
+
+
+
+
+<div class="document" id="bpmhistogramdescriptors">
+<h1 class="title">BpmHistogramDescriptors</h1>
+
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<blockquote>
+<ul class="simple">
+<li><strong>bpmIntervals</strong> (<em>vector_real</em>) - the list of bpm intervals [s]</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="outputs">
+<h2>Outputs</h2>
+<blockquote>
+<ul class="simple">
+<li><strong>firstPeakBPM</strong> (<em>real</em>) - value for the highest peak [bpm]</li>
+<li><strong>firstPeakWeight</strong> (<em>real</em>) - weight of the highest peak</li>
+<li><strong>firstPeakSpread</strong> (<em>real</em>) - spread of the highest peak</li>
+<li><strong>secondPeakBPM</strong> (<em>real</em>) - value for the second highest peak [bpm]</li>
+<li><strong>secondPeakWeight</strong> (<em>real</em>) - weight of the second highest peak</li>
+<li><strong>secondPeakSpread</strong> (<em>real</em>) - spread of the second highest peak</li>
+<li><strong>histogram</strong> (<em>vector_real</em>) - bpm histogram [bpm]</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>This algorithm computes beats per minute histogram and its statistics for the highest and second highest peak.
+Note: histogram vector contains occurance frequency for each bpm value, 0-th element corresponds to 0 bpm value.</p>
+</div>
+</div>
+
+
+
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+<div style="background-color: #C81331 !important; text-align: left; padding: 10px 10px 15px 15px">
+<a href="http://mtg.upf.edu" title="Universitat Pompeu Fabra - Music Technology Group"><img alt="Universitat Pompeu Fabra - Music Technology Group" src="../_static/upf_mtg_logo.png" style="width: 276px; height: 53px; vertical-align: top; padding-top: 5px;" /></a>
+<a href="http://www.catalonia.com/en/technology/tecnio.jsp"><img alt="" src="../_static/tecnio_logo.png" style="width: 137px; height: 60px; float:right;" /></a>
+</div>
+
+  </body>
+</html>

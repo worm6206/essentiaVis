@@ -4,7 +4,7 @@ import re
 
 from os import walk
 
-for (dirpath, dirnames, filenames) in walk("reference/"):
+for (dirpath, dirnames, filenames) in walk("streaming/"):
 	for name in filenames:
 		file=""
 		with open(dirpath+name) as f:
@@ -18,6 +18,7 @@ for (dirpath, dirnames, filenames) in walk("reference/"):
 			if m:
 				title = m.group(1)
 				sys.stdout.write(title)
+				sys.stdout.write("<br>[streaming]\n")
 			sys.stdout.write("\n</th><td class=\"col-xs-2\">\n")
 
 			p = re.compile(ur'<h2>Inputs</h2>\n<blockquote>\n<ul class="simple">\n((.|\n)*?)\n</ul>')
